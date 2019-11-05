@@ -7,7 +7,7 @@ export default function BookContainer ({books}) {
   const displayBooks = () => {
     return books.map(book => {
       return(<Book 
-      book={book}
+        book={book}
       />)
     })
 

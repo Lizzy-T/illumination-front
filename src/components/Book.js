@@ -1,20 +1,49 @@
 import React, { Component } from "react"
 
+import OpenBook from "./OpenBook"
+import './Book.css'
+
 export default class Book extends Component{
     state = {
-        isBookShowing: false
+        isBookShowing: false,
+        bookImageLeft: '',
+        bookImageRight: ''
+
     }
 
+    openBook = () => {
+        this.setState(
+            {bookImageLeft: this.props.book.page1,
+            bookImageRight: this.props.book.page2})
+    }
+
+    
+    componentDidMount = () => {
+        const { description, cover } = this.props.book
+        this.setState(
+            {bookImageRight: cover,
+            bookImageLeft: description}
+        )
+    }
 
     showBook = () => {
         this.setState({isBookShowing: !this.state.isBookShowing})
-      }
+    }
+
+    resetBook = () => {
+        const { description, cover } = this.props.book
+        this.setState(
+            {bookImageRight: cover,
+            bookImageLeft: description}
+        )
+    }
 
     render(){
-        const { isBookShowing } = this.state
+        const { isBookShowing, bookImageLeft, bookImageRight } = this.state
         const { title, spine, description, cover, page1, page2 } = this.props.book
         return(
             <div className="book-card">
+                <h6>{title}</h6>
                 <img 
                     onClick={this.showBook}
                     src={spine}
@@ -22,10 +51,12 @@ export default class Book extends Component{
                 />
                 {
                     isBookShowing
-                    ? <img
-                    src="https://content.wdl.org/2561/service/thumbnail/1403113721/1024x1024/1/1.jpg"
-                    alt="book-cover"
-                    
+                    ? 
+                    <OpenBook
+                        resetBook={this.resetBook}
+                        bookImageLeft={bookImageLeft}
+                        bookImageRight={bookImageRight}
+                        openBook={this.openBook}
                     />
                     : null
                 }
