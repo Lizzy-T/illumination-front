@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 
 import OpenBook from "./OpenBook"
+import './Book.css'
 
 export default class Book extends Component{
     state = {
