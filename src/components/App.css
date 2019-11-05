@@ -1,0 +1,11 @@
+header {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
