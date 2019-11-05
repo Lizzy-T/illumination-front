@@ -1,0 +1,42 @@
+.open-book  {
+    margin-left: 25%;
+    margin-top: 17rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Fondamento', cursive;
+
+}
+.description { 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    padding: 5rem;
+    background: black;
+    width: 300px; 
+}
+
+.exit-button:hover {
+    cursor: pointer;
+}
+
+.exit-button {
+    display: flex;
+}
+
+.exit-button i {
+    padding-right: 8px;
+}
+
+.open-book img {
+    width: 500px;
+}
+
+.open-book img:hover{
+    cursor: pointer;
+}

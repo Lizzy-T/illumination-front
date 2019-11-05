@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fondamento&display=swap');
+
 .book-card h6 {
     padding-left: 4rem;
     padding-top: 20rem;
@@ -6,8 +8,13 @@
     z-index: 2;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    font-family: 'Fondamento', cursive;
 }
 .book-card img {
     position: relative;
-    z-index: 0;
+    z-index: 1;
+}
+
+.book-card h6:hover {
+    cursor: pointer;
 }

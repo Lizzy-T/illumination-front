@@ -1,4 +1,13 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .book-container {
     display: flex;
     flex-flow: row wrap;
+    z-index: 0;
+    width: 100%;
+    background-color: black;
 }

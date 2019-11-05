@@ -1,12 +1,14 @@
+
 header {
     background-color: black;
     padding: 3rem;
 }
-h1{
-        font-size: 60px;
-        font-family: 'Lobster', cursive;
-        color: hsl(59, 84%, 57%);
-        text-shadow: 0 0 5px #0904ff, 0 0 10px #fffb03, 0 0 20px #ffe600, 0 0 30px #ffd000, 0 0 40px #ffbb00, 0 0 55px #ff9100, 0 0 75px #ff1500;
-        text-align: center;
-        }
+h1 {
+    font-size: 60px;
+    font-family: 'Fondamento', cursive;
+    color: hsl(59, 84%, 57%);
+    text-shadow: 0 0 5px #0904ff, 0 0 10px #fffb03, 0 0 20px #ffe600, 0 0 30px #ffd000, 0 0 40px #ffbb00, 0 0 55px #ff9100, 0 0 75px #ff1500;
+    text-align: center;
+}
+
     
