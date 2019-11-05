@@ -17,6 +17,11 @@ export default class Book extends Component{
             bookImageRight: this.props.book.page2})
     }
 
+    shelveBook = () => {
+        this.setState({
+            isBookShowing: false
+        })
+    }
     
     componentDidMount = () => {
         const { description, cover } = this.props.book
@@ -43,9 +48,10 @@ export default class Book extends Component{
         const { title, spine, description, cover, page1, page2 } = this.props.book
         return(
             <div className="book-card">
-                <h6>{title}</h6>
-                <img 
+                <h6 
                     onClick={this.showBook}
+                    >{title}</h6>
+                <img 
                     src={spine}
                     alt="manuscript" 
                 />
@@ -57,6 +63,7 @@ export default class Book extends Component{
                         bookImageLeft={bookImageLeft}
                         bookImageRight={bookImageRight}
                         openBook={this.openBook}
+                        shelveBook={this.shelveBook}
                     />
                     : null
                 }
