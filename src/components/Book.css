@@ -1,0 +1,13 @@
+.book-card h6 {
+    padding-left: 4rem;
+    padding-top: 20rem;
+    position: absolute;
+    color: white;
+    z-index: 2;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+.book-card img {
+    position: relative;
+    z-index: 0;
+}
